@@ -39,12 +39,11 @@ public class MainNetParams extends NetworkParameters {
 
         port = CoinDefinition.Port;
         packetMagic = CoinDefinition.PacketMagic;
-
+		
         genesisBlock.setDifficultyTarget(CoinDefinition.genesisBlockDifficultyTarget);
         genesisBlock.setTime(CoinDefinition.genesisBlockTime);
         genesisBlock.setNonce(CoinDefinition.genesisBlockNonce);
         id = ID_MAINNET;
-        subsidyDecreaseBlockCount = CoinDefinition.subsidyDecreaseBlockCount;
         spendableCoinbaseDepth = CoinDefinition.spendableCoinbaseDepth;
         String genesisHash = genesisBlock.getHashAsString();
         checkState(genesisHash.equals(CoinDefinition.genesisHash),
